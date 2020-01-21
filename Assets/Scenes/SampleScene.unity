@@ -737,7 +737,7 @@ PrefabInstance:
     - target: {fileID: 5490637408279432602, guid: c7ba8cdb73136fa4dab4de7c994633ee,
         type: 3}
       propertyPath: m_Drag
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5490637408279432603, guid: c7ba8cdb73136fa4dab4de7c994633ee,
         type: 3}
@@ -874,7 +874,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 8, y: 3, z: -9, w: 3}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1277,7 +1277,7 @@ PrefabInstance:
     - target: {fileID: 5490637408279432602, guid: c7ba8cdb73136fa4dab4de7c994633ee,
         type: 3}
       propertyPath: m_Drag
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5490637408279432603, guid: c7ba8cdb73136fa4dab4de7c994633ee,
         type: 3}
@@ -2124,7 +2124,7 @@ PrefabInstance:
     - target: {fileID: 5490637408279432602, guid: c7ba8cdb73136fa4dab4de7c994633ee,
         type: 3}
       propertyPath: m_Drag
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5490637408279432603, guid: c7ba8cdb73136fa4dab4de7c994633ee,
         type: 3}

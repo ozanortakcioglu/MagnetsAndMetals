@@ -15,7 +15,6 @@ public class Metal : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody>();
         gameObject.GetComponent<Renderer>().material = metal;
         magnets = GameObject.FindGameObjectsWithTag("Draggable");
-
     }
     private void FixedUpdate()
     {
