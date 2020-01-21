@@ -7,15 +7,13 @@ public class PlayerController : MonoBehaviour
 {
     RaycastHit hit;
     GameObject draggable;
-    public Transform ground;
     int layer_mask;
     bool isMouseDragging = false;
-    Vector3 mousePos;
+    Ray ray;
 
     private void Start()
     {
         layer_mask = LayerMask.GetMask("DragTargets");
-
         if (Screen.width < 300) 
             ChangeScale();
     }
@@ -24,8 +22,8 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            if (Physics.Raycast(mousePos, ground.transform.position, out hit, 10f, layer_mask))
+            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit, 50f, layer_mask))
             {
                 if (hit.collider.gameObject.tag == "Draggable")
                 {
@@ -39,8 +37,8 @@ public class PlayerController : MonoBehaviour
 
         if (isMouseDragging)
         {
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             draggable.GetComponent<Rigidbody>().AddForce(100f * (new Vector3(mousePos.x, 0, mousePos.z) - draggable.transform.position));
-            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
     }
     
@@ -58,4 +56,5 @@ public class PlayerController : MonoBehaviour
         foreach (GameObject go in GameObject.FindGameObjectsWithTag("Metal"))
             go.transform.localScale = new Vector3(2, 2, 2);
     }
+    
 }
